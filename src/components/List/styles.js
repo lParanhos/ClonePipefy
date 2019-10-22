@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   padding: 0 15px;
   height: 100%;
-  
+  opacity: ${props => props.done ? 0.6 : 1};
 /** Esse flex representa o dados abaixo
 *   flex-grow: 0;   
     - Permite que o item estique mais do que o necessário

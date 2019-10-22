@@ -2,14 +2,14 @@ import React from 'react';
 
 import { Container, Label } from './styles';
 
-export default function Card() {
+export default function Card({ data }) {
   return (
     <Container>
       <header>
-        <Label color="#7159c1"/>
+        {data.labels.map(label => <Label key={label} color={label} />)}
       </header>
-      <p>Terminar todos os cursos que comprei</p>
-      <img src="https://avatars3.githubusercontent.com/u/43967400?s=40&u=0a26270bca6d89866d1fc2e0628342acea3e37a6&v=4" alt=""/>
+      <p>{data.content}</p>
+      {data.user && <img src={data.user} alt="" />}    
     </Container>
   );
 }
